@@ -1,13 +1,21 @@
 package com.example.dndapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import java.util.ArrayList;
+//don't touch this till line 69
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Fragment2#newInstance} factory method to
@@ -60,5 +68,85 @@ public class Fragment2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_2, container, false);
+    }
+    //don't touch this till line 69
+
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        final EditText name2 = getActivity().findViewById(R.id.editTextTextPersonName);
+        final EditText hp2 = getActivity().findViewById(R.id.editTextNumber);
+        final EditText ac2 = getActivity().findViewById(R.id.editTextNumber2);
+
+
+        getActivity().findViewById(R.id.sub2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("demo", "rcheck");
+
+
+                String na = "" + name2.getText();
+                int hp =0;
+                String hpTemp = ("" + hp2.getText());
+                int ac=0;
+                String acTemp = ("" + ac2.getText());
+
+
+                int chck = 0;
+
+                if (na.equals("")) {
+
+                    chck++;
+                    //Toast.makeText()
+                }
+                if (hpTemp.equals("")) {
+
+                    chck++;
+                    //Toast.makeText()
+                } else {
+                    hp = Integer.parseInt(hpTemp);
+                }
+                if (acTemp.equals("")) {
+
+                    chck++;
+                    //Toast.makeText()
+                } else {
+                    ac = Integer.parseInt(acTemp);
+                }
+
+                if (chck == 0) {
+
+                    Block asd = new Block(na,hp,ac);
+
+                    mListener.add(asd);
+
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.b, new Fragment1())
+                            .commitNow();
+
+                }
+            }
+        });
+    }
+
+
+    public void onAttach(@NonNull Context context){
+        super.onAttach(context);
+        if(context instanceof Fragment1.Ilisner) {
+            mListener = (Fragment1.Ilisner) context;
+        } else {
+            throw  new RuntimeException(context.toString()+"must be ilisner");
+        }
+
+    }
+
+    Fragment1.Ilisner mListener;
+
+    public interface Ilisner{
+        void add(Block block);
+        Block get(int i);
+        ArrayList grab();
+        int id();
+        void setId(int i);
     }
 }

@@ -7,4 +7,6 @@
     <string name="ac">Armor Class:</string>
     <string name="sub">Submit</string>
     <string name="dam">Damage</string>
+    <string name="add">Add</string>
+    <string name="can">Cancel</string>
 </resources>

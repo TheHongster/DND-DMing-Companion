@@ -1,12 +1,16 @@
 package com.example.dndapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +64,26 @@ public class Fragment3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_3, container, false);
+    }
+
+
+    public void onAttach(@NonNull Context context){
+        super.onAttach(context);
+        if(context instanceof Fragment1.Ilisner) {
+            mListener = (Fragment1.Ilisner) context;
+        } else {
+            throw  new RuntimeException(context.toString()+"must be ilisner");
+        }
+
+    }
+
+    Fragment1.Ilisner mListener;
+
+    public interface Ilisner{
+        void add(Block block);
+        Block get(int i);
+        ArrayList grab();
+        int id();
+        void setId(int i);
     }
 }

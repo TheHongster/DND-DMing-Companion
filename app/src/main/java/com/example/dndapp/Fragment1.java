@@ -1,12 +1,20 @@
 package com.example.dndapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +68,55 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_1, container, false);
+    }
+
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        final ArrayList<Block> mon = mListener.grab(); //reports are going into this arraylist.
+        String TAG = "Demo";
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        Block_Adapter adapter = new Block_Adapter(mon, mListener);
+        if (mon.isEmpty()) {
+            Log.d(TAG, "Is not empty");
+        }
+
+
+        RecyclerView recyclerView = getActivity().findViewById(R.id.Recy);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(adapter);
+
+
+        getActivity().findViewById(R.id.add1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.b, new Fragment2())
+                        .commitNow();
+            }
+        });
+    }
+
+
+
+    public void onAttach(@NonNull Context context){
+        super.onAttach(context);
+        if(context instanceof Ilisner) {
+            mListener = (Ilisner) context;
+        } else {
+            throw  new RuntimeException(context.toString()+"must be ilisner");
+        }
+
+    }
+
+    Ilisner mListener;
+
+    public interface Ilisner{
+        void add(Block block);
+        Block get(int i);
+        ArrayList grab();
+        int id();
+        void setId(int i);
+
     }
 }
