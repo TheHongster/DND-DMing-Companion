@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -31,6 +32,9 @@ public class Fragment2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    public int chck;
+    public int type =-1;
 
     public Fragment2() {
         // Required empty public constructor
@@ -77,8 +81,31 @@ public class Fragment2 extends Fragment {
         final EditText name2 = getActivity().findViewById(R.id.editTextTextPersonName);
         final EditText hp2 = getActivity().findViewById(R.id.editTextNumber);
         final EditText ac2 = getActivity().findViewById(R.id.editTextNumber2);
+        final RadioGroup ty2 = getActivity().findViewById(R.id.TypeGroup);
+        final EditText amont = getActivity().findViewById(R.id.editTextNumber4);
 
-
+        ty2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                Log.d("demo", "1check");
+                if (checkedId == R.id.TypeB1){
+                    type=1;
+                    Log.d("demo", "onCheckedChanged: 1");
+                }
+                else if (checkedId == R.id.TypeB2){
+                    type =2;
+                    Log.d("demo", "onCheckedChanged: 2");
+                }
+                else if (checkedId == R.id.TypeB3){
+                    type=0;
+                }
+                else {
+                    Log.d("demo", "nerror");
+                    chck++;
+                    //Toast.makeText()
+                }
+            }
+        });
         getActivity().findViewById(R.id.sub2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,34 +118,62 @@ public class Fragment2 extends Fragment {
                 int ac=0;
                 String acTemp = ("" + ac2.getText());
 
+                chck = 0;
 
-                int chck = 0;
+                Log.d("demo", "type"+type);
+
+
 
                 if (na.equals("")) {
+                    Log.d("demo", "nerror");
 
                     chck++;
                     //Toast.makeText()
                 }
                 if (hpTemp.equals("")) {
-
+                    Log.d("demo", "nerror");
                     chck++;
                     //Toast.makeText()
                 } else {
                     hp = Integer.parseInt(hpTemp);
                 }
                 if (acTemp.equals("")) {
-
+                    Log.d("demo", "nerror");
                     chck++;
                     //Toast.makeText()
                 } else {
                     ac = Integer.parseInt(acTemp);
                 }
+                int runner=0;
+                if ((""+amont.getText()).equals("")) {
+                    runner=1;
+                }
+                else {
+                    runner=Integer.parseInt(""+amont.getText());
+                }
+                if(runner<=0){
+                    Log.d("demo", "nerror");
+                    chck++;
+                    //Toast.makeText()
+                }
+
 
                 if (chck == 0) {
 
-                    Block asd = new Block(na,hp,ac);
 
-                    mListener.add(asd);
+
+                    if (runner>1){
+                        for(int i = 1; i<= runner;i++){
+                            Block asd = new Block((na+" "+i), hp, ac, type);
+                            mListener.add(asd);
+                        }
+
+                    }
+                    else {
+                        Block asd = new Block(na, hp, ac, type);
+                        mListener.add(asd);
+                    }
+
 
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.b, new Fragment1())

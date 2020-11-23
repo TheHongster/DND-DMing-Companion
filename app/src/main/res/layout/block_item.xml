@@ -22,8 +22,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                app:layout_constraintStart_toEndOf="@+id/monster_image"
-                app:layout_constraintTop_toTopOf="@+id/monster_image" />
+                app:layout_constraintStart_toEndOf="@+id/type_image"
+                app:layout_constraintTop_toTopOf="@+id/type_image" />
 
             <TextView
                 android:id="@+id/hpID"
@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toTopOf="@+id/nameID" />
 
             <ImageView
-                android:id="@+id/monster_image"
+                android:id="@+id/type_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"

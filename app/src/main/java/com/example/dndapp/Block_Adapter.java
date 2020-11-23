@@ -45,12 +45,24 @@ public class Block_Adapter extends RecyclerView.Adapter<Block_Adapter.Block_View
 
         Block cMon = mon.get(position);
 
-        holder.nameID.setText("Name: "+ cMon.getName());
-        holder.hpID.setText("HP: "+cMon.getHp());
+        holder.nameID.setText("Name: "+ cMon.Name);
+        holder.hpID.setText("HP: "+cMon.Hp+"/"+cMon.HpMax);
 
-        // find how to set image view from folder
-        // Bitmap bitmap = BitmapFactory.decodeFile(String.valueOf(cMon.pick));
-        // holder.feeling_image.setImageBitmap(bitmap);
+        holder.AcID.setText("AC: "+cMon.Ac);
+
+        holder.HpPro.setMax(cMon.HpMax);
+        holder.HpPro.setProgress(cMon.Hp);
+
+        if (cMon.type==1){
+            holder.image.setImageResource(R.drawable.lime_green_circle_df_300x300);
+        }
+        else if (cMon.type==2){
+            holder.image.setImageResource(R.drawable.redcircle);
+        }
+        else {
+            holder.image.setImageResource(R.drawable.pan_blue_circle);
+
+        }
 
 
 
@@ -62,7 +74,7 @@ public class Block_Adapter extends RecyclerView.Adapter<Block_Adapter.Block_View
 
                 main.setId(del);
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                Fragment myFragment = new Fragment2();
+                Fragment myFragment = new Fragment3();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.b, myFragment).addToBackStack(null).commit();
             }
         });
@@ -94,7 +106,7 @@ public class Block_Adapter extends RecyclerView.Adapter<Block_Adapter.Block_View
             hpID = itemView.findViewById(R.id.hpID);
             AcID = itemView.findViewById(R.id.acID);
             HpPro = itemView.findViewById(R.id.progressBar3);
-            image = itemView.findViewById(R.id.image);
+            image = itemView.findViewById(R.id.type_image);
         }
     }
 }

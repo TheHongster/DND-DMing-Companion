@@ -9,4 +9,9 @@
     <string name="dam">Damage</string>
     <string name="add">Add</string>
     <string name="can">Cancel</string>
+    <string name="type">Type: </string>
+    <string name="play">Player</string>
+    <string name="Eny">"Enemy"</string>
+    <string name="Nu">Neutral</string>
+    <string name="Amount">Amount</string>
 </resources>

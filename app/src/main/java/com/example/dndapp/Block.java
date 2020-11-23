@@ -2,14 +2,15 @@ package com.example.dndapp;
 
 public class Block {
     public String Name;
-    public int Hp , HpMax, Ac;
+    public int Hp , HpMax, Ac, type;
 
-    public Block(String name,int hp, int ac)
+    public Block(String name,int hp, int ac, int type)
     {
         this.Name=name;
         this.Hp=hp;
         this.HpMax=hp;
         this.Ac=ac;
+        this.type=type;
     }
 
     public String getName() {
