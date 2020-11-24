@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Block_Adapter.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Block_Adapter.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.dndapp</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">android.graphics.Bitmap</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.graphics.BitmapFactory</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.util.Log</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.LayoutInflater</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.View</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.ViewGroup</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ImageView</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ProgressBar</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.TextView</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.annotation.NonNull</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.fragment.app.Fragment</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.recyclerview.widget.RecyclerView</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.ArrayList</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Block_Adapter </span><span class="s0">extends </span><span class="s1">RecyclerView.Adapter&lt;Block_Adapter.Block_View_Holder&gt; {</span>
+
+    <span class="s1">ArrayList&lt;Block&gt; mon</span><span class="s0">;</span>
+    <span class="s1">Fragment1.Ilisner main</span><span class="s0">;</span>
+
+    <span class="s0">public </span><span class="s1">Block_Adapter(ArrayList mon</span><span class="s0">, </span><span class="s1">Fragment1.Ilisner main){</span>
+        <span class="s0">this</span><span class="s1">.mon = mon</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.main = main</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+    <span class="s1">@NonNull</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">Block_View_Holder onCreateViewHolder(@NonNull ViewGroup parent</span><span class="s0">, int </span><span class="s1">viewType) {</span>
+        <span class="s1">View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.block_item</span><span class="s0">, </span><span class="s1">parent</span><span class="s0">, false</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Block_View_Holder recordViewHolder = </span><span class="s0">new </span><span class="s1">Block_View_Holder(view)</span><span class="s0">;</span>
+        <span class="s0">return </span><span class="s1">recordViewHolder</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">onBindViewHolder(@NonNull Block_View_Holder holder</span><span class="s0">, int </span><span class="s1">position) {</span>
+
+        <span class="s1">View rootView = holder.rootView</span><span class="s0">;</span>
+        <span class="s0">final int </span><span class="s1">del= position</span><span class="s0">;</span>
+
+        <span class="s1">Block cMon = mon.get(position)</span><span class="s0">;</span>
+
+        <span class="s1">holder.nameID.setText(</span><span class="s2">&quot;Name: &quot;</span><span class="s1">+ cMon.Name)</span><span class="s0">;</span>
+        <span class="s1">holder.hpID.setText(</span><span class="s2">&quot;HP: &quot;</span><span class="s1">+cMon.Hp+</span><span class="s2">&quot;/&quot;</span><span class="s1">+cMon.HpMax)</span><span class="s0">;</span>
+
+        <span class="s1">holder.AcID.setText(</span><span class="s2">&quot;AC: &quot;</span><span class="s1">+cMon.Ac)</span><span class="s0">;</span>
+
+        <span class="s1">holder.HpPro.setMax(cMon.HpMax)</span><span class="s0">;</span>
+        <span class="s1">holder.HpPro.setProgress(cMon.Hp)</span><span class="s0">;</span>
+
+        <span class="s0">if </span><span class="s1">(cMon.type==</span><span class="s3">1</span><span class="s1">){</span>
+            <span class="s1">holder.image.setImageResource(R.drawable.lime_green_circle_df_300x300)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else if </span><span class="s1">(cMon.type==</span><span class="s3">2</span><span class="s1">){</span>
+            <span class="s1">holder.image.setImageResource(R.drawable.redcircle)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else </span><span class="s1">{</span>
+            <span class="s1">holder.image.setImageResource(R.drawable.pan_blue_circle)</span><span class="s0">;</span>
+
+        <span class="s1">}</span>
+
+
+
+
+        <span class="s1">holder.rootView.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onClick(View view) {</span>
+                <span class="s1">Log.d(</span><span class="s2">&quot;Demo&quot;</span><span class="s0">, </span><span class="s2">&quot;AAAAAAAAAAAAAA&quot; </span><span class="s1">)</span><span class="s0">;</span>
+
+                <span class="s1">main.setId(del)</span><span class="s0">;</span>
+                <span class="s1">AppCompatActivity activity = (AppCompatActivity) view.getContext()</span><span class="s0">;</span>
+                <span class="s1">Fragment myFragment = </span><span class="s0">new </span><span class="s1">Fragment3()</span><span class="s0">;</span>
+                <span class="s1">activity.getSupportFragmentManager().beginTransaction().replace(R.id.b</span><span class="s0">, </span><span class="s1">myFragment).addToBackStack(</span><span class="s0">null</span><span class="s1">).commit()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+
+
+    <span class="s1">}</span>
+
+
+
+    <span class="s1">@Override</span>
+    <span class="s0">public int </span><span class="s1">getItemCount() {</span>
+        <span class="s0">return this</span><span class="s1">.mon.size()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static class </span><span class="s1">Block_View_Holder </span><span class="s0">extends  </span><span class="s1">RecyclerView.ViewHolder {</span>
+
+        <span class="s1">TextView nameID</span><span class="s0">;</span>
+        <span class="s1">TextView hpID</span><span class="s0">;</span>
+        <span class="s1">ImageView image</span><span class="s0">;</span>
+        <span class="s1">TextView AcID</span><span class="s0">;</span>
+        <span class="s1">ProgressBar HpPro</span><span class="s0">;</span>
+        <span class="s1">View rootView</span><span class="s0">;</span>
+
+        <span class="s0">public </span><span class="s1">Block_View_Holder(@NonNull View itemView) {</span>
+            <span class="s0">super</span><span class="s1">(itemView)</span><span class="s0">;</span>
+
+            <span class="s1">rootView = itemView</span><span class="s0">;</span>
+            <span class="s1">nameID = itemView.findViewById(R.id.nameID)</span><span class="s0">;</span>
+            <span class="s1">hpID = itemView.findViewById(R.id.hpID)</span><span class="s0">;</span>
+            <span class="s1">AcID = itemView.findViewById(R.id.acID)</span><span class="s0">;</span>
+            <span class="s1">HpPro = itemView.findViewById(R.id.progressBar3)</span><span class="s0">;</span>
+            <span class="s1">image = itemView.findViewById(R.id.type_image)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
