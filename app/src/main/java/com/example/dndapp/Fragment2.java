@@ -106,6 +106,16 @@ public class Fragment2 extends Fragment {
                 }
             }
         });
+        getActivity().findViewById(R.id.can2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("demo", "rcheck");
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+
+            }
+        });
         getActivity().findViewById(R.id.sub2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

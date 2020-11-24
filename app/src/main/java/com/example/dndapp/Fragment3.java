@@ -4,11 +4,15 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -67,7 +71,57 @@ public class Fragment3 extends Fragment {
     }
 
 
-    public void onAttach(@NonNull Context context){
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        final Block cur = mListener.get(mListener.id());
+
+        TextView name = getActivity().findViewById(R.id.Name3);
+        TextView ac = getActivity().findViewById(R.id.Ac3);
+        TextView hp = getActivity().findViewById(R.id.hp3);
+        ProgressBar bar = getActivity().findViewById(R.id.progressBar2);
+
+        final TextView edit = getActivity().findViewById(R.id.editTextNumber3);
+
+        name.setText(cur.Name);
+        ac.setText("" + cur.Ac);
+        hp.setText(cur.Hp + "" + cur.HpMax);
+        bar.setMax(cur.HpMax);
+        bar.setProgress(cur.Hp);
+
+        getActivity().findViewById(R.id.can3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("demo", "rcheck");
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+
+            }
+        });
+
+        getActivity().findViewById(R.id.sub3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!("" + edit.getText()).equals("")) {
+                    Log.d("demo", "rcheck");
+
+                    int damage = Integer.parseInt("" + edit.getText());
+                    cur.Hp = cur.Hp - damage;
+                    if (cur.Hp < 0) {
+                        cur.Hp = 0;
+                    }
+
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.b, new Fragment1())
+                            .commitNow();
+
+                }
+            }
+        });
+    }
+
+        public void onAttach(@NonNull Context context){
         super.onAttach(context);
         if(context instanceof Fragment1.Ilisner) {
             mListener = (Fragment1.Ilisner) context;
