@@ -25,7 +25,7 @@
 #### Context Diagram: 
 #### Data Flow Diagram: 
 #### Major Use Cases and Use Case Diagram:
-##Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
+## Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
 These are screenshots of our app that is in development. These screenshots help demonstrate the overall functionality of our project in its current state at the first demonstration. 
 #### Screenshot 1:
 ![Screenshot 1](https://i.imgur.com/HJE7IcX.png "Screenshot 1")
