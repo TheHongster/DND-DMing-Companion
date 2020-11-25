@@ -23,30 +23,33 @@
 
 ## The Context Diagram, Data Flow Diagram, and Major Use Cases Along With The Use Case Diagram.
 #### Context Diagram: 
+![Context Diagram](https://i.imgur.com/akgVBmt.png "Context Diagram")
 #### Data Flow Diagram: 
-#### Major Use Cases and Use Case Diagram:
+![Data Flow Diagram](https://i.imgur.com/GeHjPDX.png "Data Flow Diagram")
+#### Major Use Cases As A Use Case Diagram:
+![Major Use Cases As A Use Case Diagram](https://i.imgur.com/OHsWmuV.png "Major Use Cases As A Use Case Diagram")
 ## Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
 These are screenshots of our app that is in development. These screenshots help demonstrate the overall functionality of our project in its current state at the first demonstration. 
 #### Screenshot 1:
 ![Screenshot 2](https://i.imgur.com/kcsMUi4.png "Screenshot 2")
 ##### Description: 
-This is the description
+A simple add button will bring up text fields for you to input. This is the first screen that is seen when the app is loaded.
 #### Screenshot 2:
 ![Screenshot 2](https://i.imgur.com/PomsjBV.png "Screenshot 2")
 ##### Description: 
-This is the description
+Text fields that the user will fill to create a “creature” to track. The user will set the name Hit points and Armor class. The type the creature is, Player, Enemy or Neutral, then the amount of clones of the new creature. 
 #### Screenshot 3:
 ![Screenshot 3](https://i.imgur.com/5wa2sz3.png "Screenshot 3")
 ##### Description: 
-This is the description
+The main display screen that previously had just and add button will now be populated with a view of the creature list.
 #### Screenshot 4:
 ![Screenshot 4](https://i.imgur.com/YZDSnCX.png "Screenshot 4")
 ##### Description: 
-This is the description
+If a creature is selected then the user is able to change the hit point value of a creature through the damage field.
 #### Screenshot 5:
 ![Screenshot 5](https://i.imgur.com/BcdfnYU.png "Screenshot 5")
 ##### Description: 
-This is the description
+This is the screenshot of the creature list after a damage edit has been done.
 ## Short Video Demonstration Of How the App Works:
 [![Video Demonstration](https://i.imgur.com/j8gFzKx.png=250x)](https://www.youtube.com/watch?v=NpEaa2P7qZI&ab_channel=TristanBrehaut)
 
