@@ -3,4 +3,4 @@
 # ITSC-3155
 # Last Updated: December 1st, 2020
 # Group 8 Members: Ross Landgraf, Aaron Hong, Nickolas Earles, Cormac Strickland
-<center>Centered text</center>
+![Logos](https://i.imgur.com/o3EPh5Z.png "Logos")
