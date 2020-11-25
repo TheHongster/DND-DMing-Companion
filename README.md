@@ -28,23 +28,23 @@
 ## Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
 These are screenshots of our app that is in development. These screenshots help demonstrate the overall functionality of our project in its current state at the first demonstration. 
 #### Screenshot 1:
-![Screenshot 1](https://i.imgur.com/HJE7IcX.png "Screenshot 1")
+![Screenshot 1](https://imgur.com/a/kIvf9we "Screenshot 1")
 ##### Description: 
 This is the description
 #### Screenshot 2:
-![Screenshot 2](https://i.imgur.com/HJE7IcX.png "Screenshot 2")
+![Screenshot 2](https://imgur.com/a/fWgvsOf "Screenshot 2")
 ##### Description: 
 This is the description
 #### Screenshot 3:
-![Screenshot 3](https://i.imgur.com/HJE7IcX.png "Screenshot 3")
+![Screenshot 3](https://imgur.com/a/7BAlHGz "Screenshot 3")
 ##### Description: 
 This is the description
 #### Screenshot 4:
-![Screenshot 4](https://i.imgur.com/HJE7IcX.png "Screenshot 4")
+![Screenshot 4](https://imgur.com/a/VMNBvEX "Screenshot 4")
 ##### Description: 
 This is the description
 #### Screenshot 5:
-![Screenshot 5](https://i.imgur.com/HJE7IcX.png "Screenshot 5")
+![Screenshot 5](https://imgur.com/a/EqoU0Gl "Screenshot 5")
 ##### Description: 
 This is the description
 ## Short Video Demonstration Of How the App Works:
