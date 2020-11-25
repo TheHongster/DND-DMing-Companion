@@ -50,7 +50,7 @@ This is the description
 ##Short Video Demonstration Of How the App Works:
 [![Video Demonstration](https://i.imgur.com/j8gFzKx.png=250x)](https://www.youtube.com/watch?v=NpEaa2P7qZI&ab_channel=TristanBrehaut)
 
-###Statement
-#####*All members of our team have helped complete and contribute to this document.*
-#####Ross Landgraf, Aaron Hong, Nickolas Earles, Cormac Strickland
+### Statement
+##### *All members of our team have helped complete and contribute to this document.*
+##### Ross Landgraf, Aaron Hong, Nickolas Earles, Cormac Strickland
 
