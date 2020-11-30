@@ -51,7 +51,7 @@ If a creature is selected then the user is able to change the hit point value of
 ##### Description: 
 This is the screenshot of the creature list after a damage edit has been done.
 ## Short Video Demonstration Of How the App Works:
-[![Video Demonstration](https://i.imgur.com/j8gFzKx.png=250x)](https://www.youtube.com/watch?v=NpEaa2P7qZI&ab_channel=TristanBrehaut)
+[![Video Demonstration](https://i.imgur.com/3fHQmHk.jpg)](https://youtu.be/XgbTJZiEysA)
 
 ### Statement
 ##### *All members of our team have helped complete and contribute to this document.*
