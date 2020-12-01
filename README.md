@@ -26,8 +26,10 @@
 ![Context Diagram](https://i.imgur.com/akgVBmt.png "Context Diagram")
 ### Data Flow Diagram: 
 ![Data Flow Diagram](https://i.imgur.com/GeHjPDX.png "Data Flow Diagram")
-### Major Use Cases As A Use Case Diagram:
+### Major Use Cases And A Use Case Diagram:
 ![Major Use Cases As A Use Case Diagram](https://i.imgur.com/OHsWmuV.png "Major Use Cases As A Use Case Diagram")
+![Add Creature To List Use Case Diagram](https://i.imgur.com/OhFCtUX.png "Add Creature to list Use Case Diagram")
+![Damage Creature Use Case Diagram](https://i.imgur.com/xYFaf72.png "Damage Creature Use Case Diagram")
 ## Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
 These are screenshots of our app that is in development. These screenshots help demonstrate the overall functionality of our project in its current state at the first demonstration. 
 ### Screenshot 1:
