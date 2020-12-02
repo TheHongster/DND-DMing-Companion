@@ -76,7 +76,7 @@ public class Fragment1 extends Fragment {
         final ArrayList<Block> mon = mListener.grab(); //reports are going into this arraylist.
         String TAG = "Demo";
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        Block_Adapter adapter = new Block_Adapter(mon, mListener);
+        Block_Adapter adapter = new Block_Adapter(mon, mListener); //creates adapter, requires input of arraylist and ref to mListener
         if (mon.isEmpty()) {
             Log.d(TAG, "Is not empty");
         }
@@ -92,6 +92,14 @@ public class Fragment1 extends Fragment {
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.b, new Fragment2())
+                        .commitNow();
+            }
+        });
+        getActivity().findViewById(R.id.sort1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.b, new Fragment4())
                         .commitNow();
             }
         });

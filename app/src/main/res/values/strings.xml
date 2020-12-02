@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">dnd app</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">DND Companion App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Name">Name:</string>
     <string name="Hp">Hit Points:</string>
@@ -14,4 +13,5 @@
     <string name="Eny">"Enemy"</string>
     <string name="Nu">Neutral</string>
     <string name="Amount">Amount</string>
+    <string name="Sort">SORT</string>
 </resources>

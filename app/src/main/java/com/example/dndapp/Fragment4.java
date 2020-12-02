@@ -7,21 +7,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Fragment3#newInstance} factory method to
+ * Use the {@link Fragment4#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment3 extends Fragment {
+public class Fragment4 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +29,7 @@ public class Fragment3 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Fragment3() {
+    public Fragment4() {
         // Required empty public constructor
     }
 
@@ -42,11 +39,11 @@ public class Fragment3 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment3.
+     * @return A new instance of fragment Fragment4.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment3 newInstance(String param1, String param2) {
-        Fragment3 fragment = new Fragment3();
+    public static Fragment4 newInstance(String param1, String param2) {
+        Fragment4 fragment = new Fragment4();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,61 +64,26 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_3, container, false);
+        return inflater.inflate(R.layout.fragment_4, container, false);
     }
 
-
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {//TODO: SORT METHODS (main)
         super.onActivityCreated(savedInstanceState);
 
-        final Block cur = mListener.get(mListener.id());
+        ArrayList<Block> cur = mListener.grab();
 
-        TextView name = getActivity().findViewById(R.id.Name3);
-        TextView ac = getActivity().findViewById(R.id.Ac3);
-        TextView hp = getActivity().findViewById(R.id.hp3);
-        ProgressBar bar = getActivity().findViewById(R.id.progressBar2);
-
-        final TextView edit = getActivity().findViewById(R.id.editTextNumber3);
-
-        name.setText(cur.Name);
-        ac.setText("" + cur.Ac);
-        hp.setText(cur.Hp + "/" + cur.HpMax);
-        bar.setMax(cur.HpMax);
-        bar.setProgress(cur.Hp);
-
-        getActivity().findViewById(R.id.can3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("demo", "rcheck");
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.b, new Fragment1())
-                        .commitNow();
-
+        for(int i = 0; i < cur.size(); i++){
+            for(int j = i; j < cur.size(); j++){
+                /**if() {//add boolean compareto method in condition
+                    Block temp = cur.get(i);
+                    cur.get(i) = cur.get(j);
+                    cur.get(j) = temp;
+                }**/
             }
-        });
-
-        getActivity().findViewById(R.id.sub3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!("" + edit.getText()).equals("")) {
-                    Log.d("demo", "rcheck");
-
-                    int damage = Integer.parseInt("" + edit.getText());
-                    cur.Hp = cur.Hp - damage;
-                    if (cur.Hp < 0) {
-                        cur.Hp = 0;
-                    }
-
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.b, new Fragment1())
-                            .commitNow();
-
-                }
-            }
-        });
+        }
     }
 
-        public void onAttach(@NonNull Context context){
+    public void onAttach(@NonNull Context context){//references Fragment1
         super.onAttach(context);
         if(context instanceof Fragment1.Ilisner) {
             mListener = (Fragment1.Ilisner) context;
@@ -139,5 +101,6 @@ public class Fragment3 extends Fragment {
         ArrayList grab();
         int id();
         void setId(int i);
+
     }
 }
