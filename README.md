@@ -12,6 +12,11 @@
 * As a Dungeons and Dragons Game Master, I want to be able to subtract the health from the creature's health pool so I can know when a creature is dead.
 * As a Dungeons and Dragons Game Master, I want to be able to organize/sort my creatures on the list, so that I can find specific creatures faster.
 * As a Dungeons and Dragons Game Master, I want to be able to list creatures by their turn order so that I can keep combat more organized.
+* As a Dungeons and Dragons Player, I want to be able to get through a game session efficiently so that I can not waste time and have more fun.
+* As a Dungeons and Dragons Player, I want to be able to have information about the game session so that I can have the information readily available.
+* As a Dungeons and Dragons Enthusiast, I want to be able to identify gameplay attributes so that I can improve my style of play for the game.
+* As a Dungeons and Dragons Enthusiast, I want to be able to clearly observe how the game is tracked in the app, so that I can better utilize my time spent playing the game.
+
 
 ## The List of The System Features Extracted From The User Stories:
 * Add creatures to list
@@ -23,13 +28,17 @@
 
 ## The Context Diagram, Data Flow Diagram, and Major Use Cases Along With The Use Case Diagram.
 ### Context Diagram: 
-![Context Diagram](https://i.imgur.com/akgVBmt.png "Context Diagram")
+![Context Diagram](https://i.imgur.com/2Xsg4jO.png "Context Diagram")
 ### Data Flow Diagram: 
-![Data Flow Diagram](https://i.imgur.com/GeHjPDX.png "Data Flow Diagram")
-### Major Use Cases And A Use Case Diagram:
-![Add Creature To List Use Case Diagram](https://i.imgur.com/OhFCtUX.png "Add Creature to list Use Case Diagram")
-![Damage Creature Use Case Diagram](https://i.imgur.com/xYFaf72.png "Damage Creature Use Case Diagram")
-![Major Use Cases As A Use Case Diagram](https://i.imgur.com/OHsWmuV.png "Major Use Cases As A Use Case Diagram")
+![Data Flow Diagram](https://i.imgur.com/d6ODwVP.png "Data Flow Diagram")
+### Major Use Cases
+![Add Creature To List Use Case Diagram](https://i.imgur.com/NRIXTft.png "Add Creature to list Use Case Diagram")
+![Damage Creature Use Case Diagram](https://i.imgur.com/dBMJyta.png "Damage Creature Use Case Diagram")
+![Display creatures screen Use Case Diagram](https://i.imgur.com/zzBqKnW.png "Display creatures screen Use Case Diagram")
+![Edit Selected Creature Use Case Diagram](https://i.imgur.com/8tzuVXb.png "Edit Selected Creature Use Case Diagram")
+![Remove Creature Use Case Diagram](https://i.imgur.com/Fi7YUCk.png "Remove Creature Use Case Diagram")
+### Major Use Cases As A Use Case Diagram:
+![Major Use Cases As A Use Case Diagram](https://i.imgur.com/y676AXu.png "Major Use Cases As A Use Case Diagram")
 ## Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
 These are screenshots of our app that is in development. These screenshots help demonstrate the overall functionality of our project in its current state at the first demonstration. 
 ### Screenshot 1:
