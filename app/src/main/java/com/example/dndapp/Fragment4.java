@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,21 +67,114 @@ public class Fragment4 extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_4, container, false);
     }
-
+    public ArrayList<Block> cur;
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {//TODO: SORT METHODS (main)
         super.onActivityCreated(savedInstanceState);
 
-        ArrayList<Block> cur = mListener.grab();
+        cur = mListener.grab();
 
-        for(int i = 0; i < cur.size(); i++){
-            for(int j = i; j < cur.size(); j++){
-                /**if() {//add boolean compareto method in condition
-                    Block temp = cur.get(i);
-                    cur.get(i) = cur.get(j);
-                    cur.get(j) = temp;
-                }**/
+        getActivity().findViewById(R.id.nameAsc).setOnClickListener(new View.OnClickListener() {//Ascending by Name
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < cur.size(); i++) {
+                    for (int j = i; j < cur.size(); j++) {
+                        if(cur.get(i).Name.compareToIgnoreCase(cur.get(j).Name) > 0) {
+                            Block temp = cur.get(i);
+                            cur.set(i,cur.get(j));
+                            cur.set(j,temp);
+                        }
+                    }
+                }
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
             }
-        }
+        });
+        getActivity().findViewById(R.id.nameDesc).setOnClickListener(new View.OnClickListener() {//Descending by Name
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < cur.size(); i++) {
+                    for (int j = i; j < cur.size(); j++) {
+                        if(cur.get(i).Name.compareToIgnoreCase(cur.get(j).Name) < 0) {
+                            Block temp = cur.get(i);
+                            cur.set(i,cur.get(j));
+                            cur.set(j,temp);
+                        }
+                    }
+                }
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
+        getActivity().findViewById(R.id.acAsc).setOnClickListener(new View.OnClickListener() {//Descending by Name
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < cur.size(); i++) {
+                    for (int j = i; j < cur.size(); j++) {
+                        if(cur.get(i).Ac > cur.get(j).Ac) {
+                            Block temp = cur.get(i);
+                            cur.set(i,cur.get(j));
+                            cur.set(j,temp);
+                        }
+                    }
+                }
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
+        getActivity().findViewById(R.id.acDesc).setOnClickListener(new View.OnClickListener() {//Descending by Name
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < cur.size(); i++) {
+                    for (int j = i; j < cur.size(); j++) {
+                        if(cur.get(i).Ac < cur.get(j).Ac) {
+                            Block temp = cur.get(i);
+                            cur.set(i,cur.get(j));
+                            cur.set(j,temp);
+                        }
+                    }
+                }
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
+        getActivity().findViewById(R.id.hpAsc).setOnClickListener(new View.OnClickListener() {//Descending by Name
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < cur.size(); i++) {
+                    for (int j = i; j < cur.size(); j++) {
+                        if(cur.get(i).Hp > cur.get(j).Hp) {
+                            Block temp = cur.get(i);
+                            cur.set(i,cur.get(j));
+                            cur.set(j,temp);
+                        }
+                    }
+                }
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
+        getActivity().findViewById(R.id.hpDesc).setOnClickListener(new View.OnClickListener() {//Descending by Name
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < cur.size(); i++) {
+                    for (int j = i; j < cur.size(); j++) {
+                        if(cur.get(i).Hp < cur.get(j).Hp) {
+                            Block temp = cur.get(i);
+                            cur.set(i,cur.get(j));
+                            cur.set(j,temp);
+                        }
+                    }
+                }
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
     }
 
     public void onAttach(@NonNull Context context){//references Fragment1

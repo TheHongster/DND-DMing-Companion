@@ -133,5 +133,14 @@
             android:text="@string/can"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/sub3" />
+
+        <Button
+            android:id="@+id/del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteBtn"
+            app:layout_constraintEnd_toStartOf="@+id/sub3"
+            app:layout_constraintStart_toEndOf="@+id/can3"
+            app:layout_constraintTop_toTopOf="@+id/can3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

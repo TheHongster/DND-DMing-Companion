@@ -82,7 +82,7 @@ public class Fragment2 extends Fragment {
         final EditText hp2 = getActivity().findViewById(R.id.editTextNumber);
         final EditText ac2 = getActivity().findViewById(R.id.editTextNumber2);
         final RadioGroup ty2 = getActivity().findViewById(R.id.TypeGroup);
-        final EditText amont = getActivity().findViewById(R.id.editTextNumber4);
+        final EditText amount = getActivity().findViewById(R.id.editTextNumber4);
 
         ty2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -97,7 +97,7 @@ public class Fragment2 extends Fragment {
                     Log.d("demo", "onCheckedChanged: 2");
                 }
                 else if (checkedId == R.id.TypeB3){
-                    type=0;
+                    type=3;
                 }
                 else {
                     Log.d("demo", "nerror");
@@ -155,11 +155,11 @@ public class Fragment2 extends Fragment {
                     ac = Integer.parseInt(acTemp);
                 }
                 int runner=0;
-                if ((""+amont.getText()).equals("")) {
+                if ((""+amount.getText()).equals("")) {
                     runner=1;
                 }
                 else {
-                    runner=Integer.parseInt(""+amont.getText());
+                    runner=Integer.parseInt(""+amount.getText());
                 }
                 if(runner<=0){
                     Log.d("demo", "nerror");

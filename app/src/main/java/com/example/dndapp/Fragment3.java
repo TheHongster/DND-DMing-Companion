@@ -119,6 +119,15 @@ public class Fragment3 extends Fragment {
                 }
             }
         });
+        getActivity().findViewById(R.id.del).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.delete();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
     }
 
         public void onAttach(@NonNull Context context){

@@ -24,5 +24,94 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/byName"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <Button
+            android:id="@+id/nameAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/ascendingBtn"
+            app:layout_constraintBottom_toBottomOf="@+id/textView15"
+            app:layout_constraintEnd_toStartOf="@+id/nameDesc"
+            app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+        <Button
+            android:id="@+id/nameDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="@string/descendingBtn"
+            app:layout_constraintBottom_toBottomOf="@+id/nameAsc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nameAsc" />
+
+        <Button
+            android:id="@+id/acAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ascendingBtn"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/nameAsc"
+            app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+        <Button
+            android:id="@+id/acDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descendingBtn"
+            app:layout_constraintBottom_toBottomOf="@+id/acAsc"
+            app:layout_constraintStart_toStartOf="@+id/nameDesc"
+            app:layout_constraintTop_toTopOf="@+id/acAsc" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/byAc"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/byHP"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <Button
+            android:id="@+id/hpAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ascendingBtn"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/acAsc"
+            app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+        <Button
+            android:id="@+id/hpDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descendingBtn"
+            app:layout_constraintStart_toStartOf="@+id/acDesc"
+            app:layout_constraintTop_toTopOf="@+id/hpAsc" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

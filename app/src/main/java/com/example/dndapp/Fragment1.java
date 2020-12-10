@@ -125,6 +125,6 @@ public class Fragment1 extends Fragment {
         ArrayList grab();
         int id();
         void setId(int i);
-
+        void delete();
     }
 }

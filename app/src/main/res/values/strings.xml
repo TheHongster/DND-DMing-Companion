@@ -14,4 +14,10 @@
     <string name="Nu">Neutral</string>
     <string name="Amount">Amount</string>
     <string name="Sort">SORT</string>
+    <string name="byName">By Name:</string>
+    <string name="ascendingBtn">Ascending</string>
+    <string name="descendingBtn">Descending</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="byAc">Armor Class:</string>
+    <string name="byHP">By Hit Points:</string>
 </resources>

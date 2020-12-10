@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements Fragment1.Ilisner
     id=i;
     }
 
+    @Override
+    public void delete() {
+        list.remove(id);
+    }
 
 
 }
