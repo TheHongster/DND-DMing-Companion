@@ -71,6 +71,8 @@ public class Fragment4 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {//TODO: SORT METHODS (main)
         super.onActivityCreated(savedInstanceState);
 
+        mListener.changenow("Sort");
+
         cur = mListener.grab();
 
         getActivity().findViewById(R.id.nameAsc).setOnClickListener(new View.OnClickListener() {//Ascending by Name
@@ -175,6 +177,15 @@ public class Fragment4 extends Fragment {
                         .commitNow();
             }
         });
+        getActivity().findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {//Descending by Name
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction()//goes back to fragment1
+                        .replace(R.id.b, new Fragment1())
+                        .commitNow();
+            }
+        });
+
     }
 
     public void onAttach(@NonNull Context context){//references Fragment1

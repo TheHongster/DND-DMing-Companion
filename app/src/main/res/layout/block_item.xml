@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:background="#00FFFFFF"
+    android:orientation="vertical"
+    android:padding="@dimen/cardview_default_radius">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:contentPadding="10dp">
+        app:cardBackgroundColor="#00FFFFFF">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#CFCFCF">
 
             <TextView
                 android:id="@+id/nameID"

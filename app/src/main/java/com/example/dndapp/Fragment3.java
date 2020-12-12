@@ -74,6 +74,8 @@ public class Fragment3 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        mListener.changenow("Creature Display");
+
         final Block cur = mListener.get(mListener.id());
 
         TextView name = getActivity().findViewById(R.id.Name3);

@@ -78,6 +78,8 @@ public class Fragment2 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        mListener.changenow("Add Creature");
+
         final EditText name2 = getActivity().findViewById(R.id.editTextTextPersonName);
         final EditText hp2 = getActivity().findViewById(R.id.editTextNumber);
         final EditText ac2 = getActivity().findViewById(R.id.editTextNumber2);

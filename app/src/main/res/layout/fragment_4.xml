@@ -41,8 +41,8 @@
             android:id="@+id/nameAsc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/ascendingBtn"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toStartOf="@+id/nameDesc"
@@ -113,5 +113,14 @@
             android:text="@string/descendingBtn"
             app:layout_constraintStart_toStartOf="@+id/acDesc"
             app:layout_constraintTop_toTopOf="@+id/hpAsc" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/hpDesc" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

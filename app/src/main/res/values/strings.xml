@@ -20,4 +20,7 @@
     <string name="deleteBtn">Delete</string>
     <string name="byAc">Armor Class:</string>
     <string name="byHP">By Hit Points:</string>
+    <string name="back">back</string>
+    <string name="hp">Hit Points:</string>
+    <string name="tap">Tap anywhere to start</string>
 </resources>

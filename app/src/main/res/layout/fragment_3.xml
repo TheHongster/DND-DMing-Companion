@@ -17,6 +17,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="32dp"
+            android:focusable="false"
             android:text="@string/Hp"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:focusable="false"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/textView12" />
@@ -39,6 +41,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="96dp"
+            android:focusable="false"
             android:text="@string/ac"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:focusable="false"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
@@ -61,6 +65,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="32dp"
+            android:focusable="false"
             android:text="@string/Name"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +80,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:focusable="false"
             app:layout_constraintBottom_toBottomOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/hp3"
@@ -90,13 +96,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:focusable="false"
             android:text="@string/dam"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -110,6 +118,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
+            android:focusable="false"
             android:text="@string/sub"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
@@ -130,6 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
+            android:focusable="false"
             android:text="@string/can"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/sub3" />
@@ -138,6 +148,7 @@
             android:id="@+id/del"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:focusable="false"
             android:text="@string/deleteBtn"
             app:layout_constraintEnd_toStartOf="@+id/sub3"
             app:layout_constraintStart_toEndOf="@+id/can3"

@@ -2,6 +2,7 @@ package com.example.dndapp;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -54,7 +56,7 @@ public class Block_Adapter extends RecyclerView.Adapter<Block_Adapter.Block_View
         holder.HpPro.setProgress(cMon.Hp);
 
         if (cMon.type==1){
-            holder.image.setImageResource(R.drawable.lime_green_circle_df_300x300);
+            holder.image.setImageResource(R.drawable.green_circl);
         }
         else if (cMon.type==2){
             holder.image.setImageResource(R.drawable.redcircle);
@@ -63,6 +65,8 @@ public class Block_Adapter extends RecyclerView.Adapter<Block_Adapter.Block_View
             holder.image.setImageResource(R.drawable.pan_blue_circle);
 
         }
+
+
 
 
 
@@ -96,12 +100,14 @@ public class Block_Adapter extends RecyclerView.Adapter<Block_Adapter.Block_View
         ImageView image;
         TextView AcID;
         ProgressBar HpPro;
+
         View rootView;
 
         public Block_View_Holder(@NonNull View itemView) {
             super(itemView);
 
             rootView = itemView;
+
             nameID = itemView.findViewById(R.id.nameID);
             hpID = itemView.findViewById(R.id.hpID);
             AcID = itemView.findViewById(R.id.acID);

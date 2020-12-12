@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements Fragment1.Ilisner
 
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.b, new Fragment1())
+                .replace(R.id.b, new Fragment0())
                 .commitNow();
     }
 
@@ -52,5 +52,9 @@ public class MainActivity extends AppCompatActivity implements Fragment1.Ilisner
         list.remove(id);
     }
 
+    @Override
+    public void changenow(String change) {
+        this.setTitle(change);
+    }
 
 }
