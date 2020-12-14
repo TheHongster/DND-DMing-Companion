@@ -121,7 +121,16 @@ These are screenshots of our app that is in development. These screenshots help 
 | ![Screenshot 9](https://i.imgur.com/9eqhhty.png "Screenshot 9")  | ![Screenshot 10](https://i.imgur.com/MdVuTrH.png "Screenshot 10")  |
 | Description: This shows the sort’s results.  | Description: Part 2 of sort results.  |
 
-##Discussions And Conclusion
+## Before and After Additional Development:
+|  Before  |  After  |
+|---|---|
+| ![Screenshot 1](https://i.imgur.com/LYA6wRC.png "Screenshot 1")  |  ![Screenshot 2](https://i.imgur.com/nphlw8h.png "Screenshot 2") |
+| ![Screenshot 3](https://i.imgur.com/Fdu1YlI.png "Screenshot 3")  |  ![Screenshot 4](https://i.imgur.com/x4GPuAR.png "Screenshot 4") |
+| ![Screenshot 5](https://i.imgur.com/He75bVT.png "Screenshot 5")  |  ![Screenshot 6](https://i.imgur.com/BDRLJla.png "Screenshot 6") |
+| ![Screenshot 7](https://i.imgur.com/lXn37Sy.png "Screenshot 7")  |  ![Screenshot 8](https://i.imgur.com/2SY2uAs.png "Screenshot 8") |
+| ![Screenshot 9](https://i.imgur.com/JONAXce.png "Screenshot 9")  |  ![Screenshot 10](https://i.imgur.com/n5N430A.png "Screenshot 10") |
+
+## Discussions And Conclusion
 &nbsp; &nbsp; &nbsp; Before beginning work on our project we had already completed several models of the system which allowed us to accurately estimate the time and effort required. We decided which features were required and which could be added later as time permitted, so we felt confident that we would be able to implement the core requirements of our product. Fortunately our planning paid off and our predictions were mostly correct, giving us time to add quality of life features such as color coding and sorting the creature list. We also were able to spend time refining the layout and color scheme of the overall application. Determining the UI design took longer than expected as it was important for us that the app remained as minimalistic and easy-to-use as possible.
 <br> &nbsp; &nbsp; &nbsp;Our project was created using Android Studio, which only one of our groups members had experience with, but it also used Java which we had all used in previous classes. This meant that getting started with the development environment took some time as we accustomed ourselves to Android Studio, but we learned quickly from our more experienced group member. Pair programming turned out to be an invaluable tool in developing and debugging the project, with one person writing the code while others would review it in real time. 
 <br> &nbsp; &nbsp; &nbsp;We had minimal issues during development, but did run into formatting issues when displaying the database, as well as some logic errors related to the sorting functionality. Some features of Android Studio were unreliable such as the built-in ‘push to GitHub’ feature which caused problems until we decided to push updates manually using Git Bash. There was some uncertainty in our group on how to go about creating the diagrams needed for our project, but we quickly sought clarification from our assigned teacher’s assistant.
