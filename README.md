@@ -4,6 +4,52 @@
 # Last Updated: December 1st, 2020
 # Group 8 Members: Ross Landgraf, Aaron Hong, Nickolas Earles, Cormac Strickland
 ![Logos](https://i.imgur.com/o3EPh5Z.png "Logos")
+## Final Project Report With More Details Of The Project:
+#### [Final Project Report PDF](https://github.com/TheHongster/DND-DMing-Companion/blob/master/Final%20Project%20Report%20%20--%20Group%208.pdf)
+
+## Introduction:
+&nbsp; &nbsp; &nbsp; Our project is an application for the tabletop game DND (Dungeons and Dragons) for the DM (Dungeon Master) that will aid in running the game. It will keep track of the game’s statistics and mechanics such as a “monster’s” hit points and armor class as well as the player hit points and armor class. The main goal of this application is to keep track of all of the relevant statistics to the game to assure a smooth playing experience for all of the members involved in the game. 
+<br> &nbsp; &nbsp; &nbsp; Our project will be able to create an app that covers the important mechanics of running the game as a Dungeon Master. The Dungeon Master is a person who controls the different mechanics of the game and the different outcomes for all of the other players involved. Our project that creates an app to aid this person will be very important because it will keep track of many advanced concepts that are hard to keep track of within your head.
+
+## Purpose:
+&nbsp; &nbsp; &nbsp; DND (Dungeons and Dragons) games are often complicated and disorganized, especially after several hours of playtime. There is a lot of information to keep track of, so we decided to create a system to help organize and check that information. This allows players to focus on the more enjoyable aspects of the game without being bogged down by the monotony of constantly tallying and adjusting numbers. Our app is designed to make the DND experience more accessible to players without intruding too much on what makes a tabletop role-playing game so fun.
+
+## Scope:
+&nbsp; &nbsp; &nbsp; We proposed to create an application that will allow users to track the status of multiple characters for the tabletop game DND (Dungeons and Dragons) so that the user will be able to spend less time trying to keep track of individual statistics in the game. 
+<br> &nbsp; &nbsp; &nbsp; We have created an android phone application called Dungeons and Dragons Companion App that has been developed through Android Studio. This project is an application that allows users to add enemies and players into a list, that will be editable. Displaying the list using a recycler view. And allowing the user to view, sort, edit, and delete entries.
+<br> <br> The Application will have the ability to:
+* Add new creatures 
+* Keep track of creatures HP/AC. 
+* Delete creatures 
+* Sort creatures by HP/AC/Name 
+* Change the health of creatures through damage actions
+* Display creatures in a list style
+
+<br> &nbsp; &nbsp; &nbsp;  The overall objective of the application is to create a system that allows the user to input a set of data that is stored in an ArrayList, then allowing the user to interact with the data through changing fields in the ArrayList. This allows the system to take the user's inputted information and display it as a View that shows all of the creatures created by the user.
+
+## Definitions, Acronyms, and Abbreviations:
+* DND: Refers to the game Dungeons and Dragons; a tabletop game made by Wizards of the Coast. 
+* HP: Stands for hit points; it is a numerical statistic in the game to track an entity’s health in the game.
+* AC: Stands for armor class; it is a numerical statistic that represents the difficulty of “hitting” an entity within the game based on a dice roll.
+* DM: Stands for Dungeon Master; this is the master of the game that controls how the game flows and dictates what happens in the game as well as keep track of changes to the entities within the game.
+* UI: User interface; this is the medium in which the user can interact with our application.
+* DFD: Detailed Flow Diagram; this is a diagram we use to list out what we need of the system we’re trying to create.
+
+## References:
+* Dungeons and Dragons Official Website - https://dnd.wizards.com/ 
+* Android Studio - https://developer.android.com/studio 
+
+* Not necessarily a reference but an important documentation of our project:
+<br> Our GitHub Page: https://github.com/TheHongster/DND-DMing-Companion
+
+* No code was referenced in development and was done completely from scratch.
+
+## Overview: 
+&nbsp; &nbsp; &nbsp; The application allows the user(s) to create and store entities related to their session of DND. The user(s) can modify specific values like HP or AC to help keep track of the game statistics as the game session progresses. The entities the user(s) can create contain the values Name, HP, and AC which can be set and edited at will. The user(s) can also designate the type of entity it is, (player, neutral, enemy), and the number of the entity if there’s a need for several of the same entities. All of the information related to the entities are displayed in a list where any user can touch to edit the information. The application has a sort feature that can sort entities by specific categories in ascending or descending order.
+
+## Project Perspective
+&nbsp; &nbsp; &nbsp; As DND players ourselves, we had a useful perspective for designing and implementing an app to be used by other players. We all have experience with the problems that arise during a game of DND, and we all have tried other software products to solve these issues. This familiarity with the game allows us to best understand what users want in an app and how it will be used. Making an app for a game we had never played would be considerably more difficult, as often occurs in business settings where the product owner is disconnected from the desires of their users.
+
 ## The List of Our User Stories:
 * As a Dungeons and Dragons Game Master, I want to utilize my time efficiently so I can get through a game faster.
 * As a Dungeons and Dragons Game Master, I want to be able to keep track of what’s going on so I can have fun with the game without wasting time.
@@ -17,6 +63,10 @@
 * As a Dungeons and Dragons Enthusiast, I want to be able to identify gameplay attributes so that I can improve my style of play for the game.
 * As a Dungeons and Dragons Enthusiast, I want to be able to clearly observe how the game is tracked in the app, so that I can better utilize my time spent playing the game.
 
+## Specific Goals/Features:
+&nbsp; &nbsp; &nbsp; Our group had several main goals in mind while designing and developing the application. There were some specific use cases that had to be included in the app for it to be able to serve its intended purpose of tracking creature health, including create/delete a creature, change creature health, and display creature list. We also knew we would need a database for storing creature information, as well as a way to get input from the user. 
+<br> &nbsp; &nbsp; &nbsp; Outside of these core components we also wanted to add some quality of life features such as sorting and filtering creatures by their health or type, as well as color coding for quick identification of relevant information. We also had a more general design goal of keeping the app streamlined and minimalistic. Players should find the app intuitive so they can seamlessly incorporate it into their games.
+
 
 ## The List of The System Features Extracted From The User Stories:
 * Add creatures to list
@@ -26,7 +76,8 @@
 * Sort by ascending/descending based on specific attributes (Will be implemented in the next Demo)
 * Be able to list creatures by “turn order” (Will be implemented in the next Demo)
 
-## The Context Diagram, Data Flow Diagram, and Major Use Cases Along With The Use Case Diagram.
+## Important Diagrams:
+### The Context Diagram, Data Flow Diagram, and Major Use Cases Along With The Use Case Diagram:
 ### Context Diagram: 
 ![Context Diagram](https://i.imgur.com/2Xsg4jO.png "Context Diagram")
 ### Data Flow Diagram: 
@@ -39,31 +90,46 @@
 ![Remove Creature Use Case Diagram](https://i.imgur.com/Fi7YUCk.png "Remove Creature Use Case Diagram")
 ### Major Use Cases As A Use Case Diagram:
 ![Major Use Cases As A Use Case Diagram](https://i.imgur.com/y676AXu.png "Major Use Cases As A Use Case Diagram")
+
+## Total Effort:
+| Task                                      | Estimated Time of Research | Actual Time Of Research | Estimated Coding Effort | Actual Coding Effort |
+|-------------------------------------------|----------------------------|-------------------------|-------------------------|----------------------|
+| User Stories                              | ~1 hr                      | 1 hr                    | N/A                     | N/A                  |
+| Context Diagram                           | ~1.5 hrs                   | 1 hr                    | N/A                     | N/A                  |
+| DFD                                       | ~1.5 hrs                   | 2 hrs                   | N/A                     | N/A                  |
+| Use Case Diagrams                         | ~1.5 hrs                   | 1.5 hrs                 | N/A                     | N/A                  |
+| Develop Demo Of App                       | ~1.5 hrs                   | 1 hr                    | ~5 hrs                  | 5.5 hrs              |
+| Record and Edit Demonstration/Final Video | ~1.5 hrs                   | 3.5 hrs                 | N/A                     | N/A                  |
+| Screenshot App Funcitonality              | ~ .5 hrs                   | .5 hrs                  | N/A                     | N/A                  |
+| Develop Final Version Of App              | ~1.5 hrs                   | 1 hr                    | ~2 hrs                  | 5 hrs                |
+
+
+## Programs Developed:
 ## Screenshots of The User Interfaces With A Brief Description of What Each One Is For:
 These are screenshots of our app that is in development. These screenshots help demonstrate the overall functionality of our project in its current state at the first demonstration. 
-### Screenshot 1:
-![Screenshot 2](https://i.imgur.com/kcsMUi4.png "Screenshot 2")
-##### Description: 
-A simple add button will bring up text fields for you to input. This is the first screen that is seen when the app is loaded.
-### Screenshot 2:
-![Screenshot 2](https://i.imgur.com/PomsjBV.png "Screenshot 2")
-##### Description: 
-Text fields that the user will fill to create a “creature” to track. The user will set the name Hit points and Armor class. The type the creature is, Player, Enemy or Neutral, then the amount of clones of the new creature. 
-### Screenshot 3:
-![Screenshot 3](https://i.imgur.com/5wa2sz3.png "Screenshot 3")
-##### Description: 
-The main display screen that previously had just and add button will now be populated with a view of the creature list.
-### Screenshot 4:
-![Screenshot 4](https://i.imgur.com/YZDSnCX.png "Screenshot 4")
-##### Description: 
-If a creature is selected then the user is able to change the hit point value of a creature through the damage field.
-### Screenshot 5:
-![Screenshot 5](https://i.imgur.com/BcdfnYU.png "Screenshot 5")
-##### Description: 
-This is the screenshot of the creature list after a damage edit has been done.
-## Short Video Demonstration Of How the App Works:
-[![Video Demonstration](https://i.imgur.com/3fHQmHk.jpg)](https://youtu.be/XgbTJZiEysA)
-## Click on the Video Or Click [Here](https://youtu.be/XgbTJZiEysA) to access the video.
+## Screenshots:
+|   |   |
+|---|---|
+| ![Screenshot 1](https://i.imgur.com/CabMkSn.png "Screenshot 1")  | ![Screenshot 2](https://i.imgur.com/STwa3Wd.png "Screenshot 2")  |
+| Description: This is the new opening screen for the app added after request for it from testers.  | Description: This is the creature list  display with no creatures held in the Arraylist.  |
+| ![Screenshot 3](https://i.imgur.com/TpZuAK2.png "Screenshot 3")  | ![Screenshot 4](https://i.imgur.com/ZDB70aB.png "Screenshot 4")  |
+| Description: This is the add screen. This is where the user can add new creatures.  | Description: This is the creature list  display with 2 creatures held in the Arraylist that were added by the last add.  |
+| ![Screenshot 5](https://i.imgur.com/BDax6hZ.png "Screenshot 5")  | ![Screenshot 6](https://i.imgur.com/6B4YFsN.png "Screenshot 6")  |
+| Description: This is the creature list display with more values to be used for future tests.   | Description: This is the creature display showing one monster's stats. As well as showing the damage function.  |
+| ![Screenshot 7](https://i.imgur.com/EZaA69I.png "Screenshot 7")  | ![Screenshot 8](https://i.imgur.com/bUAOo5o.png "Screenshot 8")  |
+| Description: This shows the damaged monster in the list.  | Description: This shows the sorting selections.  |
+| ![Screenshot 9](https://i.imgur.com/9eqhhty.png "Screenshot 9")  | ![Screenshot 10](https://i.imgur.com/MdVuTrH.png "Screenshot 10")  |
+| Description: This shows the sort’s results.  | Description: Part 2 of sort results.  |
+
+##Discussions And Conclusion
+&nbsp; &nbsp; &nbsp; Before beginning work on our project we had already completed several models of the system which allowed us to accurately estimate the time and effort required. We decided which features were required and which could be added later as time permitted, so we felt confident that we would be able to implement the core requirements of our product. Fortunately our planning paid off and our predictions were mostly correct, giving us time to add quality of life features such as color coding and sorting the creature list. We also were able to spend time refining the layout and color scheme of the overall application. Determining the UI design took longer than expected as it was important for us that the app remained as minimalistic and easy-to-use as possible.
+<br> &nbsp; &nbsp; &nbsp;Our project was created using Android Studio, which only one of our groups members had experience with, but it also used Java which we had all used in previous classes. This meant that getting started with the development environment took some time as we accustomed ourselves to Android Studio, but we learned quickly from our more experienced group member. Pair programming turned out to be an invaluable tool in developing and debugging the project, with one person writing the code while others would review it in real time. 
+<br> &nbsp; &nbsp; &nbsp;We had minimal issues during development, but did run into formatting issues when displaying the database, as well as some logic errors related to the sorting functionality. Some features of Android Studio were unreliable such as the built-in ‘push to GitHub’ feature which caused problems until we decided to push updates manually using Git Bash. There was some uncertainty in our group on how to go about creating the diagrams needed for our project, but we quickly sought clarification from our assigned teacher’s assistant.
+
+## Final Presentation Video:
+[![Final Presentation Video](https://i.imgur.com/3fHQmHk.jpg)](https://youtu.be/XgbTJZiEysA)
+## Click on the Video Or Click [Here](https://youtu.be/XgbTJZiEysA) to access the video. 
+# UPDATE THIS LINK WITH FINAL VIDEO!!
 
 ### Statement
 ##### *All members of our team have helped complete and contribute to this document. All Team members have also reviewed the document to make sure it is to their standards.*
