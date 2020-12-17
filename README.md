@@ -136,9 +136,7 @@ These are screenshots of our app that is in development. These screenshots help 
 <br> &nbsp; &nbsp; &nbsp;We had minimal issues during development, but did run into formatting issues when displaying the database, as well as some logic errors related to the sorting functionality. Some features of Android Studio were unreliable such as the built-in ‘push to GitHub’ feature which caused problems until we decided to push updates manually using Git Bash. There was some uncertainty in our group on how to go about creating the diagrams needed for our project, but we quickly sought clarification from our assigned teacher’s assistant.
 
 ## Final Presentation Video:
-[![Final Presentation Video](https://i.imgur.com/3fHQmHk.jpg)](https://youtu.be/XgbTJZiEysA)
-## Click on the Video Or Click [Here](https://youtu.be/XgbTJZiEysA) to access the video. 
-# UPDATE THIS LINK WITH FINAL VIDEO!!
+## Click [Here](https://www.youtube.com/watch?v=-35rdO2JvNw&) to access the video. 
 
 ### Statement
 ##### *All members of our team have helped complete and contribute to this document. All Team members have also reviewed the document to make sure it is to their standards.*
