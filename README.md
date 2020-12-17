@@ -76,6 +76,49 @@
 * Sort by ascending/descending based on specific attributes (Will be implemented in the next Demo)
 * Be able to list creatures by “turn order” (Will be implemented in the next Demo)
 
+## Overview Of Programs Related To Specific Goals
+This gives a main overview of how the program/application is structured when it comes to code and the different files involved. 
+* MainActivity
+  * This acts as the base for the program all of the following fragments are displayed on top of this and pull information from it. 
+  * Arraylist that holds all information for the creatures.
+  * Holds the methods that are used to edit the arraylist that holds all information for the creatures.
+* Fragment0
+  * Is a basic press to start screen it only sends users to fragment1
+* Fragment1 
+  * This fragment acts as the display of the ArrayList
+  * Sends a request to the Block_Adapter for a formatted version of the ArrayList
+  * Holds the base for mLisiner which is used by the fragments to reference MainActivity’s methods
+  * If the user clicks on one of the items displayed in the list returned from Block_Adapter, it will take them to Fragment3.
+  * If the user taps the add or sort buttons they will be taken to the proper fragment (add = fragment2, sort= fragment4)
+* Fragment2
+  * This is the add fragment 
+  * By filling out the input sections the user is able to create a new creature (Block object) and add it to the array thru the use of the mListener 
+* Fragment3
+  * This is the creature display fragment 
+  * This fragment displays the information of a single selected creature from the ArrayList
+  * Here the user can either damage a single creature or delete a creature
+* Fragment4
+  * This is the sorting fragment
+  * This fragment is able to sort the ArrayList in ascending or descending order based off of Name, Armor Class, Hitpoints
+* Block
+  * This class is how the information of a single creature is stored
+  * This is is built in to the ArrayList for the storage
+* Block_Adapter
+  * This class in takes the Arraylist and converts it into a viewable list 
+  * Then sends it back to the fragment1
+  
+## Assumptions And Dependencies
+Some of the main assumptions with our application are:
+* The user has an android phone
+* The user is able to use a touch screen
+* The user has a basic understanding of Dungeons and Dragons 
+
+Some of the main dependencies with our application are:
+* The Android phone systems
+* Dungeons and Dragons/ or other D20 Base Systems
+* Java
+
+
 ## Important Diagrams:
 ### The Context Diagram, Data Flow Diagram, and Major Use Cases Along With The Use Case Diagram:
 ### Context Diagram: 
